@@ -86,7 +86,7 @@ const PAS={warm:"#FFE3F1",brain:"#F0E5FF",two:"#DDF1FF",calm:"#D9F7F1",bonus:"#F
 const ICO={warm:"⚡",brain:"💡",two:"👐",calm:"🌊",bonus:"📖"};
 const KEY="zaidimuPlanas.v2";
 let S=JSON.parse(localStorage.getItem(KEY)||"null")||{v:2,mine:null,kids:{},custom:{},cur:null,months:{},done:{}};
-(function(){const o="arijus",n="ajus";let ch=false;  // migration: child renamed Arijus -> Ajus, keep progress
+(function(){const o="arijus",n="ajus";let ch=false;  // migration: old child id -> ajus, keep progress
  if(S.mine&&S.mine.includes(o)){S.mine=[...new Set(S.mine.map(k=>k===o?n:k))];ch=true}
  if(S.cur===o){S.cur=n;ch=true}
  for(const f of ["months","done"])if(S[f]&&S[f][o]){if(!S[f][n])S[f][n]=S[f][o];delete S[f][o];ch=true}
